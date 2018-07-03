@@ -54,8 +54,9 @@ static inline void *arch_get_stack_ptr(void)
 
 	fprintf(stderr, "Dumping %zd stack frames.\n", frame_count);
 
-	for (i = 0; i < frame_count; i++)
+	for (i = 0; i < frame_count; i++) {
 		fprintf(stderr, "\t%s\n", symbols[i]);
+	}
 
 	free(symbols);
 
